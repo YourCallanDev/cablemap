@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CableMap by Callan Chesser</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>CableMap by Callan Chesser</h1>
+    <p>Draw, plan, and manage your cables visually.</p>
+  </header>
+
+  <div id="toolbar">
+    <label for="fileUpload">Upload Plan (PDF/Image):</label>
+    <input type="file" id="fileUpload" accept=".pdf,image/*">
+
+    <select id="toolSelect">
+      <option value="free">✏️ Freehand</option>
+      <option value="line">📏 Straight Line</option>
+      <option value="curve">〰️ Curve</option>
+    </select>
+
+    <select id="colourSelect">
+      <option value="#ff0000">🔴 XLR</option>
+      <option value="#ffff00">🟡 DMX</option>
+      <option value="#00ff00">🟢 Power</option>
+      <option value="#0000ff">🔵 Data</option>
+      <option value="#800080">🟣 Live Sound</option>
+      <option value="#ff69b4">💖 Conversion</option>
+    </select>
+
+    <input type="color" id="customColor" title="Custom Colour">
+
+    <button id="saveBtn">💾 Save</button>
+    <button id="loadBtn">📂 Load</button>
+    <button id="exportBtn">📤 Export PNG</button>
+    <button id="clearBtn">🧹 Clear</button>
+  </div>
+
+  <canvas id="cableCanvas"></canvas>
+
+  <footer>
+    <p>© 2025 CableMap by Callan Chesser | <a href="https://callanchesser.co.uk" target="_blank">callanchesser.co.uk</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
